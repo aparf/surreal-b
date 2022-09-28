@@ -1,0 +1,270 @@
+@import url(reset.css);
+
+/* ------------------------------  fonts ------------------------------ */
+@font-face{
+    src: url(../fonts/SF-Pro-Rounded-Light.otf);
+    font-family: "SFProRounded";
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SF-Pro-Rounded-Semibold.otf);
+    font-family: "SFProRounded";
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ------------------------------ default properties ------------------------------ */
+
+
+.main-outer{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-size: 28px;
+}
+
+.main-inner{
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-inner > *{
+    margin: 20px;
+}
+
+.link{
+    text-shadow: 0px 0px 10px rgb(230 254 84);
+    color: rgba(230, 254, 84, 1);
+    margin-top: 55px;
+    margin-bottom: 120px;
+}
+
+.banner{
+    align-content: space-between;
+    /*height: 60vh;*/
+    width: 40vw;
+    height: 30vh;
+    /*background-color: limegreen;*/
+    display: flex;
+    justify-content: center;
+    /*flex-direction: column;*/
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    /*margin-bottom: 70px;*/
+}
+
+.logo-text{
+    color: rgba(230, 231, 230, 1);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+
+.logo{
+    height: 50%;
+    width: 350px;
+    /*width: 95%;*/
+    /*background-color: yellowgreen;*/
+    background-image: url("../logo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content{
+    /*height: 60vh;*/
+    width: 90vw;
+    /*background-color: limegreen;*/
+
+    display: flex;
+    justify-content: center;
+    /*flex-direction: column;*/
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 300px;
+}
+
+
+
+.content > *{
+    /*background-color: yellowgreen;*/
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.gif{
+    /*height: 500px;*/
+    margin-bottom: 25px;
+    border: rgba(35, 37, 38, 1) 1px solid;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.gif-holder{
+    background-color: grey;
+    /*margin: 100px 0px;*/
+    margin: 5% 0px;
+    width: 628px;
+    height: 942px;
+}
+
+.second-row{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.second-row > *{
+    /*background-color: lightyellow;*/
+    width: 49%;
+    border: rgba(35, 37, 38, 1) 1px solid;
+    border-radius: 25px;
+}
+
+.wait{
+    width: 22%;
+}
+.opensea{
+    width: 75%;
+}
+
+.wait, .opensea{
+    display: inline-block;
+
+}
+
+.wait{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    color: rgba(230, 254, 84, 1);
+    text-shadow: 0px 0px 10px rgb(230 254 84);
+}
+
+.opensea{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+
+
+.opensea > *{
+    display: inline-block;
+    margin: 25px;
+    /*background-color: black;*/
+    height: 140px;
+
+}
+.opensea-pic{
+    /*background-color: yellowgreen;*/
+    background-image: url("../transistor.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 140px;
+    margin: 25px;
+    margin-left: 40px;
+}
+
+.opensea-text{
+    /*background-color: black;*/
+    height: 140px;
+    width: 45%;
+    margin-right: 50px;
+
+    font-size: 28px;
+    color: rgba(230, 231, 230, 1);
+    line-height: 39px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opensea-link{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    margin-right: 40px;
+
+    font-size: 28px;
+    color: rgba(230, 254, 84, 1);
+    text-shadow: 0px 0px 10px rgb(230 254 84);
+}
+
+
+.footer{
+    width: 90vw;
+    height: 100px;
+    /*background-color: limegreen;*/
+    margin: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.footer > *{
+    width: 30%;
+    height: 100%;
+    /*background-color: yellowgreen;*/
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.footer-left{
+    justify-content: flex-start;
+    position: absolute;
+    left: 0px;
+}
+
+.footer-left > *{
+    color: rgba(156, 156, 152, 1);
+    margin: 20px;
+}
+
+.footer-middle{
+    justify-content: center;
+}
+
+.footer-middle > *{
+    /*background-color: black;*/
+    height: 69px;
+    width: 69px;
+    opacity: 0.6;
+    /*background-color: yellowgreen;*/
+    background-image: url("../small-logo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.footer-right{
+    position: absolute;
+    right: 0px;
+    justify-content: flex-end;
+}
+
+.footer-right > *{
+    margin: 20px;
+    color: rgba(156, 156, 152, 1);
+}
+
+
