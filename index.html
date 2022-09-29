@@ -11,8 +11,8 @@
 <body>
 	<div class="main-outer">
 		<div class="main-inner">
-			<div class="link">
-				<p>Transmitters on OpenSea ↗</p>
+			<div class="link-container">
+				<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”>Transmitters on OpenSea ↗</a>
 			</div>
 
 			<div class="banner">
@@ -24,39 +24,59 @@
 					<p>show off, and use all your web3 loot</p>
 				</div> 
 			</div>
-
-			<div class="content">
+			<div class="content" style="position: relative;">
 				<div class="gif">
-					<div class="gif-holder"></div>
-				</div>
+					<div class="gif-holder">
+						<video width="100%" autoplay="true" playsinline="" loop="true" muted="true\">
+				        <source src="Scale_03.mp4" 
+				            type="video/mp4">
+				    	</video>
+				    </div>
+<!-- 					<div class="gif-holder"></div>
+ -->				</div>
 				<div class="second-row">
-					<div class="wait">
+					<div class="wait" id="waitButton">
 						<p>Waitlist</p>
 					</div>
-					<div class="opensea">
+
+					<form autocomplete="off" class="waitlist-form" name="submit-to-google-sheet">
+
+						<div class="waitlist-form-email">
+							<input type="email" name="email" placeholder="Email" required>
+							<!-- <p> Email </p> -->
+						</div>
+
+
+						<div class="waitlist-form-submit">
+							<button type="submit" id="emailButton">Submit</button>
+						</div>
+					</form>
+
+					<div class="opensea" id='opensea'>
 						<div class="opensea-pic">
 						</div>
 						<div class="opensea-text">
 							<p>Transmitters are your early access to the Surreal Genesis collection</p>
 						</div>
 						<div class="opensea-link">
-							<p> OpenSea ↗</p>
+							<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”> OpenSea ↗</a>
 						</div>
 					</div>
 				</div>
+			
 			</div>
 			<footer class="footer">
 				<div class="footer-left">
 					<div class="footer-left-twitter">
-						<p>Twitter</p>
+						<a class="footer-l" href="https://twitter.com/surrealapp" target=”_blank”>Twitter</a>
 					</div>
 
 					<div class="footer-left-email">
-						<p>Email</p>
+						<a class="footer-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”>Email</a>
 					</div>
 
 					<div class="footer-left-jobs">
-						<p>Jobs</p>
+						<a class="footer-l" href="https://surreallabs.notion.site/Surreal-Open-Roles-fa7fbe3882ca41f3a5cf3a4e48f80f2d" target=”_blank”>Jobs</a>
 					</div>
 				</div>
 				<div class="footer-middle">
@@ -74,7 +94,38 @@
 			</div> -->
 		</div>
 	</div>
-	<script src = js/script.js></script>
+
+<!-- 	add script into separete file -->
+	<script>
+	  const scriptURL = 'https://script.google.com/macros/s/AKfycbwpgvVbHUFfAIZ_u4by7EKx-bVCFQj1KuPrapmhQkTWkORN5IjrLJAcbN8QKZMryhrp2g/exec'
+
+	  const waitButton = document.getElementById("waitButton");
+	  const form = document.forms['submit-to-google-sheet']
+	  const opensea = document.getElementById("opensea")
+
+
+	  waitButton.addEventListener('click', function(){
+	  	opensea.style.visibility = "hidden";
+	  	form.style.visibility = "visible";
+	  	waitButton.style.border="rgba(230 254 84) 1px solid";
+	  })
 	
+	  
+
+	  form.addEventListener('submit', e => {
+	    e.preventDefault()
+	    document.getElementById("emailButton").innerHTML = "?";
+	    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+	      .then(response => {
+	      	console.log('Success!', response)
+	      	document.getElementById("emailButton").innerHTML = "✓";
+	      })
+	      .catch(error => {
+	      	console.error('Error!', error.message)
+	      	document.getElementById("emailButton").innerHTML = "✗";
+	      })
+	    document.getElementById("emailButton").disabled = true;
+	  })
+	</script>
 </body>
 </html>
