@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>.</title>
+	<title>Surreal</title>
 	<meta charset="utf-8">
 	<meta description="boilerplate code">
 	<meta keywords="boilerplate, test">
@@ -10,6 +10,26 @@
 </head>
 <body>
 	<div class="main-outer">
+		<div class="star-container" id="c-1">
+			<div class="star star-l-1-1" id="l-1">
+			</div>
+		</div>
+<!-- 		<div class="star star-l-1">
+		</div> -->
+<!-- 		<div class="star-container"> -->
+			<div class="star star-l-2">
+			</div>
+<!-- 		</div> -->
+
+		<div class="star star-r-1">
+		</div>
+
+		<div class="star star-r-2">
+		</div>
+
+		<div class="star star-r-3">
+		</div>
+
 		<div class="main-inner">
 			<div class="link-container">
 				<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”>Transmitters on OpenSea ↗</a>
@@ -42,13 +62,13 @@
 					<form autocomplete="off" class="waitlist-form" name="submit-to-google-sheet">
 
 						<div class="waitlist-form-email">
-							<input type="email" name="email" placeholder="Email" required>
+							<input type="email" name="email" placeholder="Email" oninvalid="{this.classList.add('waitlist-form-email-input-incorrect'); this.setCustomValidity(' ');}" required>
 							<!-- <p> Email </p> -->
 						</div>
 
 
 						<div class="waitlist-form-submit">
-							<button type="submit" id="emailButton">Submit</button>
+							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >Submit</button>
 						</div>
 					</form>
 
@@ -63,7 +83,8 @@
 						</div>
 					</div>
 				</div>
-			
+			</div>
+			<div class="star star-l-3">
 			</div>
 			<footer class="footer">
 				<div class="footer-left">
@@ -99,15 +120,30 @@
 	<script>
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbwpgvVbHUFfAIZ_u4by7EKx-bVCFQj1KuPrapmhQkTWkORN5IjrLJAcbN8QKZMryhrp2g/exec'
 
+	  var open = false;
 	  const waitButton = document.getElementById("waitButton");
 	  const form = document.forms['submit-to-google-sheet']
 	  const opensea = document.getElementById("opensea")
+	  const star = document.getElementById("l-1")
 
+	  star.addEventListener('click', function(){
+	  	document.getElementById("c-1").classList.add("star-container-animated");
+	  })
 
 	  waitButton.addEventListener('click', function(){
-	  	opensea.style.visibility = "hidden";
-	  	form.style.visibility = "visible";
-	  	waitButton.style.border="rgba(230 254 84) 1px solid";
+	  	if (!(open)){
+	  		console.log('1')
+	  		opensea.style.visibility = "hidden";
+	  		form.style.visibility = "visible";
+	  		waitButton.style.border="rgba(230 254 84) 1px solid";
+	  	} else {
+	  		console.log('1')
+	  		opensea.style.visibility = "visible";
+	  		form.style.visibility = "hidden";
+	  		waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
+
+	  	}
+	  	open = !open
 	  })
 	
 	  
@@ -125,7 +161,19 @@
 	      	document.getElementById("emailButton").innerHTML = "✗";
 	      })
 	    document.getElementById("emailButton").disabled = true;
+	    document.getElementById("emailButton").classList.remove('waitlist-form-submit-hover');
+	   
 	  })
+
+	//   function validateForm() {
+	// 	    var x = document.forms["submit-to-google-sheet"]["email"].value;
+	// 	    var atpos = x.indexOf("@");
+	// 	    var dotpos = x.lastIndexOf(".");
+	// 	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+	// 	        alert("Not a valid e-mail address");
+	// 	        return false;
+	// 	    }
+	// }
 	</script>
 </body>
 </html>
