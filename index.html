@@ -40,8 +40,7 @@
 					
 				</div>
 				<div class="logo-text">
-					<p> A simple and fun way to track,</p>
-					<p>show off, and use all your web3 loot</p>
+					<p> A simple and fun way to track, <br class="logo-text-newline"> show off, and use all your web3 loot</p>
 				</div> 
 			</div>
 			<div class="content" style="position: relative;">
@@ -59,10 +58,10 @@
 						<p>Waitlist</p>
 					</div>
 
-					<form autocomplete="off" class="waitlist-form" name="submit-to-google-sheet">
+					<form autocomplete="off" class="waitlist-form" name="submit-to-google-sheet" novalidate>
 
-						<div class="waitlist-form-email">
-							<input type="email" name="email" placeholder="Email" oninvalid="{this.classList.add('waitlist-form-email-input-incorrect'); this.setCustomValidity(' ');}" required>
+						<div class="waitlist-form-email" id="waitlist-email-c">
+							<input type="email" name="email" placeholder="Email" id="waitlist-email" oninvalid="{document.getElementById('waitlist-email-c').classList.add('waitlist-form-email-input-incorrect');}" required>
 							<!-- <p> Email </p> -->
 						</div>
 
@@ -126,54 +125,81 @@
 	  const opensea = document.getElementById("opensea")
 	  const star = document.getElementById("l-1")
 
+	  const emailContainer = document.getElementById("waitlist-email-c");
+	  const email = document.getElementById("waitlist-email");
+
+
+	  // email.prevent
+	  // email.setCustomValidity(" ");
+	  // console.log(email);
+	  // document.getElementById('waitlist-email').reportValidity('S');
+
 	  star.addEventListener('click', function(){
 	  	document.getElementById("c-1").classList.add("star-container-animated");
+	  })
+
+	  email.addEventListener('click', function(){
+	  	emailContainer.style.border="rgba(230 254 84) 1px solid";
 	  })
 
 	  waitButton.addEventListener('click', function(){
 	  	if (!(open)){
 	  		console.log('1')
 	  		opensea.style.visibility = "hidden";
+	  		opensea.style.display="none";
+	  		form.style.display="inline-flex";
 	  		form.style.visibility = "visible";
 	  		waitButton.style.border="rgba(230 254 84) 1px solid";
 	  	} else {
 	  		console.log('1')
 	  		opensea.style.visibility = "visible";
+	  		opensea.style.display="inline-flex";
 	  		form.style.visibility = "hidden";
+	  		form.style.display="none";
 	  		waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
 
 	  	}
 	  	open = !open
 	  })
-	
+
+	function validateForm() {
+	    var x = document.forms["submit-to-google-sheet"]["email"].value;
+	    var atpos = x.indexOf("@");
+	    var dotpos = x.lastIndexOf(".");
+	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+	        // alert("Not a valid e-mail address");
+	        emailContainer.style.border="red 1px solid";
+	        return false;
+	    }
+	}
+
+
+	function tupyingFocus(){
+		emailContainer.style.border="rgba(230 254 84) 1px solid";
+	}
 	  
 
 	  form.addEventListener('submit', e => {
 	    e.preventDefault()
+	    if (validateForm()){
 	    document.getElementById("emailButton").innerHTML = "?";
 	    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 	      .then(response => {
 	      	console.log('Success!', response)
 	      	document.getElementById("emailButton").innerHTML = "✓";
+	      	// document.getElementById("emailButton").disabled = true;
 	      })
 	      .catch(error => {
 	      	console.error('Error!', error.message)
 	      	document.getElementById("emailButton").innerHTML = "✗";
+	      	// document.getElementById("emailButton").disabled = false;
 	      })
-	    document.getElementById("emailButton").disabled = true;
+	    
 	    document.getElementById("emailButton").classList.remove('waitlist-form-submit-hover');
+	}
 	   
 	  })
 
-	//   function validateForm() {
-	// 	    var x = document.forms["submit-to-google-sheet"]["email"].value;
-	// 	    var atpos = x.indexOf("@");
-	// 	    var dotpos = x.lastIndexOf(".");
-	// 	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-	// 	        alert("Not a valid e-mail address");
-	// 	        return false;
-	// 	    }
-	// }
 	</script>
 </body>
 </html>
