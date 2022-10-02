@@ -692,6 +692,7 @@
         width: 85%;
     }
     .gif{
+        border: none;
         margin-bottom: 75px;
     }
     .gif-holder{
@@ -756,12 +757,9 @@
         height: auto;
     }
 
-    .second-row > *{
-        border: rgba(230 254 84) 1px solid;
-    }
+
 
     .waitlist-form{
-        border: none;
         position: relative;
         display: none;
         flex-direction: column;
@@ -779,11 +777,6 @@
     .waitlist-form-email input{
         height: 55px;
         font-weight: 200;
-    }
-
-    .waitlist-form-email{
-        border-color: rgba(230 254 84) !important;
-        /*border: rgba(230 254 84) 1px solid;*/
     }
 
 
