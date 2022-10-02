@@ -416,6 +416,7 @@
 
 .wait:hover {
     cursor: pointer;
+    border-color: rgba(230 254 84) !important;
     border: rgba(230 254 84) 1px solid;
 }
 
@@ -778,6 +779,11 @@
     .waitlist-form-email input{
         height: 55px;
         font-weight: 200;
+    }
+
+    .waitlist-form-email{
+        border-color: rgba(230 254 84) !important;
+        /*border: rgba(230 254 84) 1px solid;*/
     }
 
 

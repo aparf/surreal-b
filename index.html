@@ -156,7 +156,9 @@
 	  		opensea.style.display="inline-flex";
 	  		form.style.visibility = "hidden";
 	  		form.style.display="none";
-	  		waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
+	  		if (window.innerWidth > 481)
+	  			waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
+	  		
 
 	  	}
 	  	open = !open
