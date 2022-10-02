@@ -173,6 +173,7 @@
 	        emailContainer.style.border="red 1px solid";
 	        return false;
 	    }
+	    return true;
 	}
 
 
@@ -189,12 +190,12 @@
 	      .then(response => {
 	      	console.log('Success!', response)
 	      	document.getElementById("emailButton").innerHTML = "✓";
-	      	// document.getElementById("emailButton").disabled = true;
+	      	document.getElementById("emailButton").disabled = true;
 	      })
 	      .catch(error => {
 	      	console.error('Error!', error.message)
 	      	document.getElementById("emailButton").innerHTML = "✗";
-	      	// document.getElementById("emailButton").disabled = false;
+	      	document.getElementById("emailButton").disabled = false;
 	      })
 	    
 	    document.getElementById("emailButton").classList.remove('waitlist-form-submit-hover');
