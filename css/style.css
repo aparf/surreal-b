@@ -481,6 +481,7 @@
 
 .wait:hover {
     cursor: pointer;
+    border-color: rgba(230 254 84) !important;
     border: rgba(230 254 84) 1px solid;
 }
 
@@ -776,6 +777,7 @@
         width: 85%;
     }
     .gif{
+        border: none;
         margin-bottom: 75px;
     }
     .gif-holder{
@@ -844,12 +846,9 @@
         height: auto;
     }
 
-    .second-row > *{
-        /*border: rgba(230 254 84) 1px solid;*/
-    }
+
 
     .waitlist-form{
-        border: none;
         position: relative;
         display: none;
         flex-direction: column;

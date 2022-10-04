@@ -177,8 +177,9 @@
 
 	  		// form.style.display="none";
 	  		form.style.visibility = "hidden";
-	  		form.style.opacity='0';
+
 	  		waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
+	  		
 
 	  	}
 	  	openWindow = !openWindow
@@ -193,6 +194,7 @@
 	        emailContainer.style.border="red 1px solid";
 	        return false;
 	    }
+	    return true;
 	}
 
 
@@ -209,12 +211,12 @@
 	      .then(response => {
 	      	console.log('Success!', response)
 	      	document.getElementById("emailButton").innerHTML = "✓";
-	      	// document.getElementById("emailButton").disabled = true;
+	      	document.getElementById("emailButton").disabled = true;
 	      })
 	      .catch(error => {
 	      	console.error('Error!', error.message)
 	      	document.getElementById("emailButton").innerHTML = "✗";
-	      	// document.getElementById("emailButton").disabled = false;
+	      	document.getElementById("emailButton").disabled = false;
 	      })
 	    
 	    document.getElementById("emailButton").classList.remove('waitlist-form-submit-hover');
