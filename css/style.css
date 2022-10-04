@@ -181,6 +181,10 @@
     font-size: 28px;
     font-family: "SuisseIntl";
     font-weight: 200;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
 }
 
 .star{
@@ -270,15 +274,74 @@
 
 
 .main-inner{
-    /*position: relative;*/
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    max-width: 1280px;
+    margin: auto;
 }
 
 .main-inner > *{
     margin: 20px;
+}
+.floating{
+    z-index: 20;
+    position: fixed;
+    width: 50%;
+    left: 0px;
+    /*top: 0px;*/
+    top: 30px;
+    /*background-color: blue;*/
+    margin: 0;
+}
+
+#floating-logo{
+    visibility: hidden;
+    display: inline-block;
+    /*left: 150px;*/
+    top: 25px;
+    z-index: 20;
+    height: 73px;
+    width: 73px;
+    opacity: 0;
+    filter: drop-shadow(rgb(230, 254, 84) 0px 0px 4px);
+
+    background-image: url("../floating-logo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    transition: all 0.2s ease-in;
+}
+
+.floating-inner{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 25;
+    /*right: 0;*/
+    left: 20%;
+}
+
+#floating-logo:hover{
+    /*background-color: blue;*/
+    transform: rotate(180deg);
+    cursor: pointer;
+    transition: transform .3s linear;
+
+}
+
+.floating-text{
+    visibility: hidden;
+    display: inline-block;
+    margin-left: 20px;
+    color: rgb(230, 254, 84);
+    text-shadow: 0px 0px 10px rgb(230 254 84);
+    opacity: 0;
+    transition: all 0.5s ease-in;
 }
 
 .link-container{
@@ -303,8 +366,9 @@
 .banner{
     align-content: space-between;
     /*height: 60vh;*/
-    width: 40%;
-    height: 32vh;
+    width: 45%;
+    height: 265px;
+    /*height: 32vh;*/
     /*background-color: limegreen;*/
     display: flex;
     justify-content: center;
@@ -338,7 +402,7 @@
 
 .content{
     /*height: 60vh;*/
-    width: 90vw;
+    width: 90%;
     /*background-color: limegreen;*/
 
     display: flex;
@@ -401,13 +465,14 @@
 }
 
 .wait{
+    display: inline-block;
     height: 192px;
     width: 22%;
     margin-right: 25px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /*margin-right: 25px;*/
+    margin-right: 25px;
 
     font-size: 28px;
     color: rgba(230, 254, 84, 1);
@@ -432,6 +497,9 @@
 
     display: inline-flex;
     justify-content: space-between;
+    opacity: 0;
+
+    transition: visibility 0.5s, opacity 0.5s ease-out;
 }
 
 .waitlist-form-email{
@@ -450,6 +518,7 @@
 }*/
 
 .waitlist-form-email input{
+    box-sizing:border-box;
 
     height: 192px;
     text-decoration: none;
@@ -478,7 +547,9 @@
 /*.waitlist-form-email:invalid{
     border: red 1px solid;
 }*/
-
+.waitlist-form-submit > *{
+    position: relative;
+}
 .waitlist-form-submit{
     display: inline-block;
     /*border: yellow 1px solid;*/
@@ -486,6 +557,7 @@
     width: 35%;
     height: 190px;
     /*background-color: white;*/
+
 }
 
 
@@ -519,12 +591,13 @@
     border-color: rgb(38, 40, 41);
 }
 .opensea{
-    display: none;
-    width: 76%;
+    /*width: 750px;*/
+    width: 78%;
     display: inline-flex;
     justify-content: space-between;
+    opacity: 1;
+    transition: opacity 0.5s, visibility 0.5s ease-out;
 }
-
 
 
 .opensea > *{
@@ -544,6 +617,9 @@
     width: 140px;
     margin: 25px;
     margin-left: 40px;
+    mix-blend-mode: lighten;
+
+    transition:  all 0.5s ease-out;
 }
 
 .opensea-text{
@@ -577,7 +653,7 @@
 
 
 .footer{
-    width: 90vw;
+    width: 90%;
     height: 100px;
     /*background-color: limegreen;*/
     margin: 0px;
@@ -646,9 +722,18 @@
     color: rgba(156, 156, 152, 1);
 }
 
+.check{
+    width: 76%;
+    position: absolute;
+    right: 0px;
+    display: none;
+    visibility: hidden;
+}
+
 
 
 @media screen and (max-device-width:481px){
+
     body {
         overflow-x: hidden;
         width: 100%;
@@ -719,6 +804,10 @@
         margin-bottom: 50px;
     }
 
+    .gif{
+        border: none;
+    }
+
     .opensea{
         flex-direction: column;
         height:auto;
@@ -756,7 +845,7 @@
     }
 
     .second-row > *{
-        border: rgba(230 254 84) 1px solid;
+        /*border: rgba(230 254 84) 1px solid;*/
     }
 
     .waitlist-form{
@@ -847,6 +936,10 @@
         right: 325px;
         bottom: 50px;
     }
+    .floating{
+        display: none;
+    }
 
 }
+
 
