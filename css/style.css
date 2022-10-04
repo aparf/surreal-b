@@ -597,7 +597,7 @@
     display: inline-flex;
     justify-content: space-between;
     opacity: 1;
-    transition: opacity 0.5s, visibility 0.5s ease-out;
+    transition: visibility 0.5s, opacity 0.5s ease-out;
 }
 
 
@@ -618,7 +618,7 @@
     width: 140px;
     margin: 25px;
     margin-left: 40px;
-    mix-blend-mode: lighten;
+    /*mix-blend-mode: lighten;*/
 
     transition:  all 0.5s ease-out;
 }
