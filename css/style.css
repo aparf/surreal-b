@@ -298,14 +298,15 @@
 }
 
 #floating-logo{
-    visibility: hidden;
+    /*visibility: hidden;*/
+    /*opacity: 1;*/
     display: inline-block;
     /*left: 150px;*/
     top: 25px;
     z-index: 20;
     height: 73px;
     width: 73px;
-    opacity: 0;
+    /*opacity: 0;*/
     filter: drop-shadow(rgb(230, 254, 84) 0px 0px 4px);
 
     background-image: url("../floating-logo.png");
@@ -596,29 +597,30 @@
     width: 78%;
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     opacity: 1;
+    mix-blend-mode: lighten;
     transition: visibility 0.5s, opacity 0.5s ease-out;
 }
 
 
 .opensea > *{
     display: inline-block;
-    margin: 25px;
     /*background-color: black;*/
     height: 140px;
 
 }
 .opensea-pic{
     /*background-color: yellowgreen;*/
-    background-image: url("../transistor.png");
+    background-image: url("../transistor-old.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 
     width: 140px;
-    margin: 25px;
-    margin-left: 40px;
-    /*mix-blend-mode: lighten;*/
+/*    margin: 25px;*/
+    margin-left: 30px;
+    mix-blend-mode: lighten;
 
     transition:  all 0.5s ease-out;
 }
@@ -626,8 +628,9 @@
 .opensea-text{
     /*background-color: black;*/
     height: 140px;
-    width: 45%;
-    margin-right: 50px;
+    width: 56%;
+    margin-left: 0px;
+    margin-right: 40px;
 
     font-size: 28px;
     color: rgba(230, 231, 230, 1);
@@ -645,7 +648,7 @@
     align-items: center;
 
     width: 20%;
-    margin-right: 40px;
+    margin-right: 30px;
 
     font-size: 28px;
     color: rgba(230, 254, 84, 1);
@@ -936,6 +939,10 @@
         bottom: 50px;
     }
     .floating{
+        display: none;
+    }
+
+    .opensea-text-break{
         display: none;
     }
 

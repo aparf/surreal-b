@@ -30,7 +30,7 @@
 		<div class="star star-r-3">
 		</div>
 
-		<div class="main-inner">
+		<div class="main-inner" id="main-inner">
 			<div class="floating">
 				<div class="floating-inner">
 					<div class="floating-logo" onclick="window.open('https://twitter.com/surrealapp', 'mywindow')" id="floating-logo">
@@ -85,7 +85,7 @@
 						<div class="opensea-pic">
 						</div>
 						<div class="opensea-text">
-							<p>Transmitters are your early access to the Surreal Genesis collection</p>
+							<p>Transmitters are your early access <br class="opensea-text-break"> to the Surreal Genesis collection</p>
 						</div>
 						<div class="opensea-link">
 							<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”> OpenSea ↗</a>
@@ -153,8 +153,11 @@
 	  email.addEventListener('click', function(){
 	  	emailContainer.style.border="rgba(230 254 84) 1px solid";
 	  })
+	  // console.log(parseInt(window.innerWidth))
+	  // console.log('asdf', parseInt(opensea.offsetWidth) / parseInt(window.innerWidth));
 
 	  waitButton.addEventListener('click', function(){
+	  	// form.style.width = (parseInt(opensea.offsetWidth) / parseInt(document.getElementById("main-inner").innerWidth) * 100).toString() + '%';
 	  	form.style.width = opensea.offsetWidth + 'px';
 	  	if (!(openWindow)){
 	  		console.log('1')
@@ -228,17 +231,17 @@
 
 	const floatingLogo = document.getElementById("floating-logo")
 
-	window.addEventListener("scroll", function(){
-	  var y = window.scrollY;
-	  console.log(y);
-	  if (y >= 300) {
-	    floatingLogo.style.opacity = '1';
-	    floatingLogo.style.visibility = "visible";
-	  } else {
-	    floatingLogo.style.opacity= '0';
-	    floatingLogo.style.visibility = "hidden";
-	  }
-	});
+	// window.addEventListener("scroll", function(){
+	//   var y = window.scrollY;
+	//   console.log(y);
+	//   if (y >= 300) {
+	//     floatingLogo.style.opacity = '1';
+	//     floatingLogo.style.visibility = "visible";
+	//   } else {
+	//     floatingLogo.style.opacity= '0';
+	//     floatingLogo.style.visibility = "hidden";
+	//   }
+	// });
 
 	floatingLogo.addEventListener('mouseover', function() {
 		document.getElementById("floating-text").style.opacity='1'
