@@ -846,14 +846,16 @@
     }
 
     .second-row{
+        position: relative;
         height: auto;
     }
 
 
 
     .waitlist-form{
-        position: relative;
-        display: none;
+        margin: 0px;
+        position: absolute;
+        /*display: none;*/
         flex-direction: column;
     }
     .waitlist-form >*{

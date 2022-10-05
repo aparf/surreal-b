@@ -131,6 +131,7 @@
 
 	  var openWindow = false;
 	  const waitButton = document.getElementById("waitButton");
+
 	  const form = document.forms['submit-to-google-sheet']
 	  const opensea = document.getElementById("opensea")
 	  const star = document.getElementById("l-1")
@@ -156,11 +157,17 @@
 	  // console.log(parseInt(window.innerWidth))
 	  // console.log('asdf', parseInt(opensea.offsetWidth) / parseInt(window.innerWidth));
 
+	  	
+
 	  waitButton.addEventListener('click', function(){
 	  	// form.style.width = (parseInt(opensea.offsetWidth) / parseInt(document.getElementById("main-inner").innerWidth) * 100).toString() + '%';
-	  	form.style.width = opensea.offsetWidth + 'px';
+	  	if (window.innerWidth > 481)
+	  		form.style.width = opensea.offsetWidth + 'px';
+	  	else
+	  		form.style.top = (parseInt(waitButton.offsetHeight) + 50).toString() + 'px';
 	  	if (!(openWindow)){
-	  		console.log('1')
+
+	  		
 	  		
 	  		opensea.style.visibility = "hidden";
 	  		opensea.style.opacity='0';
