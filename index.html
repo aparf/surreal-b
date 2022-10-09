@@ -164,12 +164,14 @@
 	  const star = document.getElementById("l-1")
 	  const stars = document.getElementsByClassName("star")
 	  console.log(stars)
-	  for (let s of stars){
-	  	console.log(s);
-	  	s.addEventListener('click', function(){
-	  		document.getElementById("c-" + s.id).classList.add("star-container-animated");
-	  	})
-	  }
+	  if (window.innerWidth > 481){
+		  for (let s of stars){
+
+		  	s.addEventListener('click', function(){
+		  		document.getElementById("c-" + s.id).classList.add("star-container-animated");
+		  	})
+		  }
+		}
 
 	  const emailContainer = document.getElementById("waitlist-email-c");
 	  const email = document.getElementById("waitlist-email");
