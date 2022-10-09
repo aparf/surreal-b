@@ -10,26 +10,54 @@
 </head>
 <body>
 	<div class="main-outer">
-		<div class="star-container" id="c-1">
-			<div class="star star-l-1-1" id="l-1">
+
+		<div class="star-container" id="c-l-1">
+			<div class="star" id="l-1">
 			</div>
 		</div>
-<!-- 		<div class="star star-l-1">
-		</div> -->
-<!-- 		<div class="star-container"> -->
-			<div class="star star-l-2">
+
+		<div class="star-container" id="c-l-2">
+			<div class="star" id="l-2">
 			</div>
-<!-- 		</div> -->
+		</div>
+
+		<div class="star-container" id="c-r-1">
+			<div class="star" id="r-1">
+			</div>
+		</div>
+
+		<div class="star-container" id="c-r-2">
+			<div class="star" id="r-2">
+			</div>
+		</div>
+
+		<div class="star-container" id="c-l-3">
+			<div class="star" id="l-3">
+			</div>
+		</div>
+
+		<div class="star-container" id="c-r-3">
+			<div class="star" id="r-3">
+			</div>
+		</div>
+<!-- 
+		<div class="star star-l-3">
+		</div> -->
+<!-- 		<div class="star star-l-1">
+		</div>
+
+		<div class="star star-l-2">
+		</div>
 
 		<div class="star star-r-1">
 		</div>
 
 		<div class="star star-r-2">
-		</div>
-
+		</div> -->
+<!-- 
 		<div class="star star-r-3">
 		</div>
-
+ -->
 		<div class="main-inner" id="main-inner">
 			<div class="floating">
 				<div class="floating-inner">
@@ -56,7 +84,7 @@
 				<div class="gif">
 					<div class="gif-holder">
 						<video width="100%" autoplay="true" playsinline="" loop="true" muted="true\">
-				        <source src="Scale_03.mp4" 
+				        <source src="Scale_05.mp4" 
 				            type="video/mp4">
 				    	</video>
 				    </div>
@@ -93,8 +121,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="star star-l-3">
-			</div>
 			<footer class="footer">
 				<div class="footer-left">
 					<div class="footer-left-twitter">
@@ -102,7 +128,8 @@
 					</div>
 
 					<div class="footer-left-email">
-						<a class="footer-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”>Email</a>
+						<div id="footer-email-popup">gm@surr.app</div>
+						<div class="footer-l" id="footer-email">Email</div>
 					</div>
 
 					<div class="footer-left-jobs">
@@ -135,21 +162,35 @@
 	  const form = document.forms['submit-to-google-sheet']
 	  const opensea = document.getElementById("opensea")
 	  const star = document.getElementById("l-1")
+	  const stars = document.getElementsByClassName("star")
+	  console.log(stars)
+	  for (let s of stars){
+	  	console.log(s);
+	  	s.addEventListener('click', function(){
+	  		document.getElementById("c-" + s.id).classList.add("star-container-animated");
+	  	})
+	  }
 
 	  const emailContainer = document.getElementById("waitlist-email-c");
 	  const email = document.getElementById("waitlist-email");
 
 	 
 
-
 	  // email.prevent
 	  // email.setCustomValidity(" ");
 	  // console.log(email);
 	  // document.getElementById('waitlist-email').reportValidity('S');
 
-	  star.addEventListener('click', function(){
-	  	document.getElementById("c-1").classList.add("star-container-animated");
-	  })
+	  // star.addEventListener('click', function(){
+
+	  // 	document.getElementById("c-l-1").classList.add("star-container-animated");
+	  // })
+
+
+	  // star.addEventListener('click', function(){
+	  // 	document.getElementById("c-1").classList.add("star-container-animated");
+	  // })
+
 
 	  email.addEventListener('click', function(){
 	  	emailContainer.style.border="rgba(230 254 84) 1px solid";
@@ -258,6 +299,30 @@
 		document.getElementById("floating-text").style.opacity='0';
 		document.getElementById("floating-text").style.visibility='hidden';
 	});
+
+	document.getElementById("footer-email").addEventListener('mouseover', function(){
+		document.getElementById("footer-email-popup").style.opacity='1';
+		document.getElementById("footer-email-popup").style.visibility='visible';
+
+	})
+
+
+	document.getElementById("footer-email").addEventListener('click', function(){
+		navigator.clipboard.writeText(document.getElementById("footer-email-popup").innerHTML);
+		document.getElementById("footer-email-popup").innerHTML = 'Copied';
+		document.getElementById("footer-email-popup").style.opacity='1';
+		document.getElementById("footer-email-popup").style.visibility='visible';
+
+		if (window.innerWidth <= 481)
+			setTimeout(function(){
+				document.getElementById("footer-email-popup").style.opacity='0';
+				document.getElementById("footer-email-popup").style.visibility='hidden';}, 1500)
+			})
+
+	document.getElementById("footer-email").addEventListener('mouseout', function(){
+		document.getElementById("footer-email-popup").style.opacity='0';
+		document.getElementById("footer-email-popup").style.visibility='hidden';
+	})
 
 
 	// var event = new MouseEvent('mouseover', {
