@@ -168,6 +168,10 @@
     }
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 
 /* ------------------------------ default properties ------------------------------ */
@@ -190,6 +194,22 @@
 
 }
 
+
+
+#loader{
+    position: absolute;
+    z-index: 20;
+/*    opacity: 0;*/
+/*    display: none;
+    visibility: hidden;*/
+      border: 5px solid transparent; 
+      border-top: 5px solid white; 
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1.5s linear infinite;
+
+}
 .star{
     z-index: 1;
     margin: 0;
@@ -564,6 +584,8 @@
 }
 
 .waitlist-form-email{
+
+
     border-radius: 25px;
     margin-right: 25px;
     display: inline-block;
@@ -572,6 +594,8 @@
     /*background-color: yellow;*/
 
 }
+
+
 
 /*
 .waitlist-form-email > input:invalid {
@@ -612,6 +636,7 @@
     position: relative;
 }
 .waitlist-form-submit{
+    position: relative;
     display: inline-block;
     /*border: yellow 1px solid;*/
     /*border-radius: 25px;*/
@@ -625,6 +650,10 @@
 
 
 .waitlist-form-submit button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     height: 100%;
     text-decoration: none;
@@ -751,6 +780,10 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer-left-email:hover{
+    cursor: pointer;
 }
 
 #footer-email-popup{

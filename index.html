@@ -12,6 +12,7 @@
 	<div class="main-outer">
 
 		<div class="star-container" id="c-l-1">
+
 			<div class="star" id="l-1">
 			</div>
 		</div>
@@ -83,8 +84,8 @@
 			<div class="content" style="position: relative;">
 				<div class="gif">
 					<div class="gif-holder">
-						<video width="100%" autoplay="true" playsinline="" loop="true" muted="true\">
-				        <source src="Scale_05.mp4" 
+						<video width="100%" autoplay="true" playsinline loop="true" muted="true">
+				        <source src="Scale_06.mp4" 
 				            type="video/mp4">
 				    	</video>
 				    </div>
@@ -103,8 +104,11 @@
 
 
 						<div class="waitlist-form-submit">
-							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >Submit</button>
+							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >Submit
+							</button>
+							<!-- <div id="loader"></div> -->
 						</div>
+
 					</form>
 
 
@@ -163,6 +167,8 @@
 	  const opensea = document.getElementById("opensea")
 	  const star = document.getElementById("l-1")
 	  const stars = document.getElementsByClassName("star")
+	  const loader = document.getElementById("loader")
+
 	  console.log(stars)
 	  if (window.innerWidth > 481){
 		  for (let s of stars){
@@ -204,10 +210,14 @@
 
 	  waitButton.addEventListener('click', function(){
 	  	// form.style.width = (parseInt(opensea.offsetWidth) / parseInt(document.getElementById("main-inner").innerWidth) * 100).toString() + '%';
-	  	if (window.innerWidth > 481)
+	  	if (window.innerWidth > 481){
 	  		form.style.width = opensea.offsetWidth + 'px';
-	  	else
+	  		// loader.style.bottom = (parseInt(form.style.height) / 2).toString() + 'px';
+	  	}
+	  	else{
 	  		form.style.top = (parseInt(waitButton.offsetHeight) + 50).toString() + 'px';
+	  	}
+
 	  	if (!(openWindow)){
 
 	  		
@@ -261,10 +271,19 @@
 	  form.addEventListener('submit', e => {
 	    e.preventDefault()
 	    if (validateForm()){
+	    	console.log(document.getElementById("loader"))
 	    document.getElementById("emailButton").innerHTML = "?";
+	    // document.getElementById("loader").style.color = "black"
+	    // document.getElementById("loader").style.display="block";
+	    // document.getElementById("loader").style.visibility='visible';
+	    
+
 	    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 	      .then(response => {
+	     //  	document.getElementById("loader").style.visibility="hidden";
+	    	// document.getElementById("loader").style.display="none";
 	      	console.log('Success!', response)
+
 	      	document.getElementById("emailButton").innerHTML = "✓";
 	      	document.getElementById("emailButton").disabled = true;
 	      })
@@ -318,11 +337,17 @@
 		if (window.innerWidth <= 481)
 			setTimeout(function(){
 				document.getElementById("footer-email-popup").style.opacity='0';
-				document.getElementById("footer-email-popup").style.visibility='hidden';}, 1500)
-			})
+				document.getElementById("footer-email-popup").style.visibility='hidden';
+			}, 1500)
+	})
 
 	document.getElementById("footer-email").addEventListener('mouseout', function(){
+
 		document.getElementById("footer-email-popup").style.opacity='0';
+		setTimeout(function(){
+			document.getElementById("footer-email-popup").innerHTML = 'gm@surr.app';
+			}, 600)
+		// document.getElementById("footer-email-popup").innerHTML = 'gm@surr.app';
 		document.getElementById("footer-email-popup").style.visibility='hidden';
 	})
 
