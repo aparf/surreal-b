@@ -366,7 +366,8 @@
 .floating{
     z-index: 20;
     position: fixed;
-    width: 50%;
+    width: auto;
+    /*width: 50%;*/
     left: 0px;
     /*top: 0px;*/
     top: 30px;
@@ -514,8 +515,10 @@
     /*background-color: black;*/
     /*margin: 100px 0px;*/
     margin: 95px 0px;
-    width: 628px;
-    height: 942px;
+    width: 705px;
+    height: 1080px;
+/*    width: 628px;
+    height: 942px;*/
 }
 
 .video{
