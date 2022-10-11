@@ -200,10 +200,10 @@
     position: absolute;
     z-index: 20;
 /*    opacity: 0;*/
-/*    display: none;
-    visibility: hidden;*/
-      border: 5px solid transparent; 
-      border-top: 5px solid white; 
+    /*display: none;*/
+    /*visibility: hidden;*/
+      border: 2px solid transparent; 
+      border-top: 2px solid #0E0F0F; 
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -653,6 +653,30 @@
 
 
 .waitlist-form-submit button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+
+    border: none;
+    background: rgb(230 254 84);
+    resize: none;
+    /*outline: none;*/
+
+    border: rgba(230 254 84) 1px solid;
+    border-radius: 25px;
+
+    color: black;
+    font-size: inherit;
+    font-family: "SuisseIntl";
+    font-weight: 200;
+}
+
+.waitlist-form-submit-button{
 
     display: flex;
     justify-content: center;

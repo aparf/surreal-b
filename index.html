@@ -104,8 +104,15 @@
 
 
 						<div class="waitlist-form-submit">
-							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >Submit
+							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >
+								Submit
+								<!-- <span id="loader" style="display:block"></span> -->
 							</button>
+<!-- 							<div type="submit" id="emailButton" class= "waitlist-form-submit-button waitlist-form-submit-hover">
+								Submit
+								<div id="loader"></div>
+							</div> -->
+
 							<!-- <div id="loader"></div> -->
 						</div>
 
@@ -167,7 +174,7 @@
 	  const opensea = document.getElementById("opensea")
 	  const star = document.getElementById("l-1")
 	  const stars = document.getElementsByClassName("star")
-	  const loader = document.getElementById("loader")
+	  // const loader = document.getElementById("loader")
 
 	  console.log(stars)
 	  if (window.innerWidth > 481){
@@ -181,6 +188,7 @@
 
 	  const emailContainer = document.getElementById("waitlist-email-c");
 	  const email = document.getElementById("waitlist-email");
+
 
 	 
 
@@ -262,7 +270,9 @@
 	    return true;
 	}
 
+	// document.getElementById('emailButton').click(function() {form.submit()});
 
+	const loader = document.getElementById("loader");
 	function tupyingFocus(){
 		emailContainer.style.border="rgba(230 254 84) 1px solid";
 	}
@@ -272,18 +282,21 @@
 	    e.preventDefault()
 	    if (validateForm()){
 	    	console.log(document.getElementById("loader"))
-	    document.getElementById("emailButton").innerHTML = "?";
+	    // document.getElementById("emailButton").innerHTML = "?";
 	    // document.getElementById("loader").style.color = "black"
 	    // document.getElementById("loader").style.display="block";
-	    // document.getElementById("loader").style.visibility='visible';
+	    document.getElementById("emailButton").innerHTML = "<span id='loader' style='display:block; z-index:24;'></span>";
+	    // loader.style.visibility='visible';
 	    
 
 	    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 	      .then(response => {
-	     //  	document.getElementById("loader").style.visibility="hidden";
-	    	// document.getElementById("loader").style.display="none";
-	      	console.log('Success!', response)
 
+	      	
+	    	// document.getElementById("loader").style.display="none";
+
+	      	console.log('Success!', response)
+	      	// loader.style.visibility="hidden";
 	      	document.getElementById("emailButton").innerHTML = "✓";
 	      	document.getElementById("emailButton").disabled = true;
 	      })
