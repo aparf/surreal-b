@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="main-outer">
-
+		<!-- stars begin -->
 		<div class="star-container" id="c-l-1">
 
 			<div class="star" id="l-1">
@@ -41,85 +41,71 @@
 			<div class="star" id="r-3">
 			</div>
 		</div>
-<!-- 
-		<div class="star star-l-3">
-		</div> -->
-<!-- 		<div class="star star-l-1">
-		</div>
+		<!-- stars end -->
 
-		<div class="star star-l-2">
-		</div>
-
-		<div class="star star-r-1">
-		</div>
-
-		<div class="star star-r-2">
-		</div> -->
-<!-- 
-		<div class="star star-r-3">
-		</div>
- -->
 		<div class="main-inner" id="main-inner">
+			<!-- floating logo and text begin -->
 			<div class="floating">
 				<div class="floating-inner">
-					<div class="floating-logo" onclick="window.open('https://twitter.com/surrealapp', 'mywindow')" id="floating-logo">
-					</div>
-					<div class="floating-text" id="floating-text">
+					<div class="floating-logo" id="floating-logo" onclick="window.open('https://twitter.com/surrealapp', 'mywindow')"></div>
+					<div class ="floating-text" id="floating-text">
 						Soon in Apple store
 					</div>
 				</div>
 			</div>
+			<!-- floating logo and text end -->
+
+			<!-- top link begin -->
 			<div class="link-container">
 				<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”>Transmitters on OpenSea ↗</a>
 			</div>
+			<!-- top link end -->
 
+			<!-- logo and text begin -->
 			<div class="banner">
-				<div class="logo">
-					
-				</div>
+				<div class="logo"></div>
 				<div class="logo-text">
 					<p> A simple and fun way to track, <br class="logo-text-newline"> show off, and use all your web3 loot</p>
 				</div> 
 			</div>
+			<!-- logo and text end -->
+
+			<!-- content 2 row structure begin -->
 			<div class="content" style="position: relative;">
-				<div class="gif">
-					<div class="gif-holder">
-						<video width="100%" autoplay="true" playsinline loop="true" muted="true">
-				        <source src="Scale_06.mp4" 
+				<!-- first row: video begin -->
+				<div class="video">
+					<div class="video-holder">
+						<video width="100%" autoplay="true" playsinline loop="true" muted="true" >
+				        <source src="images/Scale_06.mp4" 
 				            type="video/mp4">
 				    	</video>
 				    </div>
-<!-- 					<div class="gif-holder"></div>
- -->				</div>
+				</div>
+				<!-- first row: video end -->
+
+				<!-- second row: wailist button, form and opensea ad begin -->
 				<div class="second-row">
-					<div class="wait wait-hover" id="waitButton">
+					<!-- wailist button begin -->
+					<div class="wait wait-hover waitlist-button-border-uncolored" id="waitlist-button">
 						<p>Waitlist</p>
 					</div>
+					<!-- wailist button end -->
+
+					<!-- waitlist form begin -->
 					<form autocomplete="off" class="waitlist-form" name="submit-to-google-sheet" novalidate>
-
 						<div class="waitlist-form-email" id="waitlist-email-c">
-							<input type="email" name="email" placeholder="Email" id="waitlist-email" oninvalid="{document.getElementById('waitlist-email-c').classList.add('waitlist-form-email-input-incorrect');}" required>
-							<!-- <p> Email </p> -->
+							<input type="email" name="email" placeholder="Email" id="waitlist-email-input" required>
 						</div>
-
 
 						<div class="waitlist-form-submit">
 							<button type="submit" id="emailButton" class= "waitlist-form-submit-hover" >
 								Submit
-								<!-- <span id="loader" style="display:block"></span> -->
 							</button>
-<!-- 							<div type="submit" id="emailButton" class= "waitlist-form-submit-button waitlist-form-submit-hover">
-								Submit
-								<div id="loader"></div>
-							</div> -->
-
-							<!-- <div id="loader"></div> -->
 						</div>
-
 					</form>
+					<!-- waitlist form end -->
 
-
-
+					<!-- opensea ad begin -->
 					<div class="opensea" id='opensea'>
 						<div class="opensea-pic">
 						</div>
@@ -130,250 +116,45 @@
 							<a class="opensea-l" href="https://opensea.io/assets/ethereum/0x3530d178aa7ad7c88a98eb66a0f1949910477ee0/115792084653744730648585963239904892381353967367965040689853645325328657154049" target=”_blank”> OpenSea ↗</a>
 						</div>
 					</div>
+					<!-- opensea ad end -->
+
 				</div>
+				<!-- second row: wailist form and opensea ad end -->
+
 			</div>
+			<!-- content 2 row structure begin -->
+
+			<!-- footer 3 column structure begin-->
 			<footer class="footer">
 				<div class="footer-left">
 					<div class="footer-left-twitter">
 						<a class="footer-l" href="https://twitter.com/surrealapp" target=”_blank”>Twitter</a>
 					</div>
-
 					<div class="footer-left-email">
 						<div id="footer-email-popup">gm@surr.app</div>
 						<div class="footer-l" id="footer-email">Email</div>
 					</div>
-
 					<div class="footer-left-jobs">
 						<a class="footer-l" href="https://surreallabs.notion.site/Surreal-Open-Roles-fa7fbe3882ca41f3a5cf3a4e48f80f2d" target=”_blank”>Jobs</a>
 					</div>
 				</div>
+
 				<div class="footer-middle">
 					<div class="footer-middle-logo"></div>
 				</div>
+
 				<div class="footer-right">
 					<div class="footer-right-company">
 						<p>© Surreal Labs</p>
 					</div>
 				</div>
 			</footer>
+			<!-- footer 3 column structure end-->
 
-			<!-- <div class="footer">
-				
-			</div> -->
 		</div>
 	</div>
+	<script src = js/script.js></script>
 
-<!-- 	add script into separete file -->
-	<script>
-	  const scriptURL = 'https://script.google.com/macros/s/AKfycbwpgvVbHUFfAIZ_u4by7EKx-bVCFQj1KuPrapmhQkTWkORN5IjrLJAcbN8QKZMryhrp2g/exec'
-
-	  var openWindow = false;
-	  const waitButton = document.getElementById("waitButton");
-
-	  const form = document.forms['submit-to-google-sheet']
-	  const opensea = document.getElementById("opensea")
-	  const star = document.getElementById("l-1")
-	  const stars = document.getElementsByClassName("star")
-	  // const loader = document.getElementById("loader")
-
-	  console.log(stars)
-	  if (window.innerWidth > 481){
-		  for (let s of stars){
-
-		  	s.addEventListener('click', function(){
-		  		document.getElementById("c-" + s.id).classList.add("star-container-animated");
-		  	})
-		  }
-		}
-
-	  const emailContainer = document.getElementById("waitlist-email-c");
-	  const email = document.getElementById("waitlist-email");
-
-
-	 
-
-	  // email.prevent
-	  // email.setCustomValidity(" ");
-	  // console.log(email);
-	  // document.getElementById('waitlist-email').reportValidity('S');
-
-	  // star.addEventListener('click', function(){
-
-	  // 	document.getElementById("c-l-1").classList.add("star-container-animated");
-	  // })
-
-
-	  // star.addEventListener('click', function(){
-	  // 	document.getElementById("c-1").classList.add("star-container-animated");
-	  // })
-
-
-	  email.addEventListener('click', function(){
-	  	emailContainer.style.border="rgba(230 254 84) 1px solid";
-	  })
-	  // console.log(parseInt(window.innerWidth))
-	  // console.log('asdf', parseInt(opensea.offsetWidth) / parseInt(window.innerWidth));
-
-	  	
-
-	  waitButton.addEventListener('click', function(){
-	  	// form.style.width = (parseInt(opensea.offsetWidth) / parseInt(document.getElementById("main-inner").innerWidth) * 100).toString() + '%';
-	  	if (window.innerWidth > 481){
-	  		form.style.width = opensea.offsetWidth + 'px';
-	  		// loader.style.bottom = (parseInt(form.style.height) / 2).toString() + 'px';
-	  	}
-	  	else{
-	  		form.style.top = (parseInt(waitButton.offsetHeight) + 50).toString() + 'px';
-	  	}
-
-	  	if (!(openWindow)){
-
-	  		
-	  		
-	  		opensea.style.visibility = "hidden";
-	  		opensea.style.opacity='0';
-	  		// opensea.style.display="none";
-
-
-	  		// form.style.display="inline-flex";
-	  		form.style.visibility = "visible";
-	  		form.style.opacity = '1';
-
-	  		waitButton.style.border="rgba(230 254 84) 1px solid";
-	  	} else {
-	  		console.log('1')
-	  		
-	  		// opensea.style.display="inline-flex";
-	  		opensea.style.visibility = "visible";
-	  		opensea.style.opacity='1';
-
-	  		// form.style.display="none";
-	  		form.style.visibility = "hidden";
-	  		form.style.opacity='0';
-
-	  		waitButton.style.border="rgba(35, 37, 38, 1) 1px solid";
-	  		
-
-	  	}
-	  	openWindow = !openWindow
-	  })
-
-	function validateForm() {
-	    var x = document.forms["submit-to-google-sheet"]["email"].value;
-	    var atpos = x.indexOf("@");
-	    var dotpos = x.lastIndexOf(".");
-	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-	        // alert("Not a valid e-mail address");
-	        emailContainer.style.border="red 1px solid";
-	        return false;
-	    }
-	    return true;
-	}
-
-	// document.getElementById('emailButton').click(function() {form.submit()});
-
-	const loader = document.getElementById("loader");
-	function tupyingFocus(){
-		emailContainer.style.border="rgba(230 254 84) 1px solid";
-	}
-	  
-
-	  form.addEventListener('submit', e => {
-	    e.preventDefault()
-	    if (validateForm()){
-	    	console.log(document.getElementById("loader"))
-	    // document.getElementById("emailButton").innerHTML = "?";
-	    // document.getElementById("loader").style.color = "black"
-	    // document.getElementById("loader").style.display="block";
-	    document.getElementById("emailButton").innerHTML = "<span id='loader' style='display:block; z-index:24;'></span>";
-	    // loader.style.visibility='visible';
-	    
-
-	    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-	      .then(response => {
-
-	      	
-	    	// document.getElementById("loader").style.display="none";
-
-	      	console.log('Success!', response)
-	      	// loader.style.visibility="hidden";
-	      	document.getElementById("emailButton").innerHTML = "✓";
-	      	document.getElementById("emailButton").disabled = true;
-	      })
-	      .catch(error => {
-	      	console.error('Error!', error.message)
-	      	document.getElementById("emailButton").innerHTML = "✗";
-	      	document.getElementById("emailButton").disabled = false;
-	      })
-	    
-	    document.getElementById("emailButton").classList.remove('waitlist-form-submit-hover');
-	}
-	   
-	  })
-
-	const floatingLogo = document.getElementById("floating-logo")
-
-	// window.addEventListener("scroll", function(){
-	//   var y = window.scrollY;
-	//   console.log(y);
-	//   if (y >= 300) {
-	//     floatingLogo.style.opacity = '1';
-	//     floatingLogo.style.visibility = "visible";
-	//   } else {
-	//     floatingLogo.style.opacity= '0';
-	//     floatingLogo.style.visibility = "hidden";
-	//   }
-	// });
-
-	floatingLogo.addEventListener('mouseover', function() {
-		document.getElementById("floating-text").style.opacity='1'
-		document.getElementById("floating-text").style.visibility='visible';
-	});
-	floatingLogo.addEventListener('mouseout', function() {
-		document.getElementById("floating-text").style.opacity='0';
-		document.getElementById("floating-text").style.visibility='hidden';
-	});
-
-	document.getElementById("footer-email").addEventListener('mouseover', function(){
-		document.getElementById("footer-email-popup").style.opacity='1';
-		document.getElementById("footer-email-popup").style.visibility='visible';
-
-	})
-
-
-	document.getElementById("footer-email").addEventListener('click', function(){
-		navigator.clipboard.writeText(document.getElementById("footer-email-popup").innerHTML);
-		document.getElementById("footer-email-popup").innerHTML = 'Copied';
-		document.getElementById("footer-email-popup").style.opacity='1';
-		document.getElementById("footer-email-popup").style.visibility='visible';
-
-		if (window.innerWidth <= 481)
-			setTimeout(function(){
-				document.getElementById("footer-email-popup").style.opacity='0';
-				document.getElementById("footer-email-popup").style.visibility='hidden';
-			}, 1500)
-	})
-
-	document.getElementById("footer-email").addEventListener('mouseout', function(){
-
-		document.getElementById("footer-email-popup").style.opacity='0';
-		if (window.innerWidth > 481){
-		setTimeout(function(){
-			document.getElementById("footer-email-popup").innerHTML = 'gm@surr.app';
-			}, 600)}
-		// document.getElementById("footer-email-popup").innerHTML = 'gm@surr.app';
-		document.getElementById("footer-email-popup").style.visibility='hidden';
-	})
-
-
-	// var event = new MouseEvent('mouseover', {
-	// 	document.getElementById("floating-text").style.opacity='1'
-	// });
-
-	// floatingLogo.dispatchEvent(event);
-
-
-
-	</script>
+	
 </body>
 </html>

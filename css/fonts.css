@@ -1,0 +1,144 @@
+/* ------------------------------  fonts ------------------------------ */
+@font-face{
+    src: url(../fonts/SuisseIntl-UltraLight.otf);
+    font-family: "SuisseIntl";
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-UltraLightItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Thin.otf);
+    font-family: "SuisseIntl";
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-ThinItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Light.otf);
+    font-family: "SuisseIntl";
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-LightItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Book.otf);
+    font-family: "SuisseIntl";
+    font-weight: 350;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-BookItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 350;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Book.otf);
+    font-family: "SuisseIntl";
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-BookItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Regular.otf);
+    font-family: "SuisseIntl";
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-RegularItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Medium.otf);
+    font-family: "SuisseIntl";
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-MediumItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-SemiBold.otf);
+    font-family: "SuisseIntl";
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-SemiBoldItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Bold.otf);
+    font-family: "SuisseIntl";
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-BoldItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Bold.otf);
+    font-family: "SuisseIntl";
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-BoldItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face{
+    src: url(../fonts/SuisseIntl-Black.otf);
+    font-family: "SuisseIntl";
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face{
+    src: url(../fonts/SuisseIntl-BlackItalic.otf);
+    font-family: "SuisseIntl";
+    font-weight: 800;
+    font-style: italic;
+}

@@ -1,354 +1,20 @@
 @import url(reset.css);
-
-/* ------------------------------  fonts ------------------------------ */
-@font-face{
-    src: url(../fonts/SuisseIntl-UltraLight.otf);
-    font-family: "SuisseIntl";
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-UltraLightItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Thin.otf);
-    font-family: "SuisseIntl";
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-ThinItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Light.otf);
-    font-family: "SuisseIntl";
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-LightItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 300;
-    font-style: italic;
-}
+@import url(fonts.css);
+@import url(stars.css);
+@import url(mobile.css);
 
 
-@font-face{
-    src: url(../fonts/SuisseIntl-Book.otf);
-    font-family: "SuisseIntl";
-    font-weight: 350;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-BookItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 350;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Book.otf);
-    font-family: "SuisseIntl";
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-BookItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Regular.otf);
-    font-family: "SuisseIntl";
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-RegularItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Medium.otf);
-    font-family: "SuisseIntl";
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-MediumItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-SemiBold.otf);
-    font-family: "SuisseIntl";
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-SemiBoldItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Bold.otf);
-    font-family: "SuisseIntl";
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-BoldItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Bold.otf);
-    font-family: "SuisseIntl";
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-BoldItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face{
-    src: url(../fonts/SuisseIntl-Black.otf);
-    font-family: "SuisseIntl";
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face{
-    src: url(../fonts/SuisseIntl-BlackItalic.otf);
-    font-family: "SuisseIntl";
-    font-weight: 800;
-    font-style: italic;
-}
-/* ------------------------------ animations ------------------------------ */
-
-@keyframes rotating {
-  0% {
-    transform: translate(0px, 0px) rotate(0deg) scale(1);
-    opacity: 1;
-    animation-timing-function: linear;
-  }
-
-  100% {
-    transform: translate(0px, 0px) rotate(360deg) scale(1);
-    opacity: 1;
-
-  }
-}
-
-@keyframes gravity{
-    from{
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-/* ------------------------------ default properties ------------------------------ */
-
-
-
+/* ------------------------------ default page properties ------------------------------ */
 
 .main-outer{
     position: relative;
     height: 100%;
     width: 100%;
     background-color: #0E0F0F;
-    /*background-color: black;*/
     font-size: 28px;
     font-family: "SuisseIntl";
     font-weight: 200;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-
 }
-
-
-
-#loader{
-    position: absolute;
-    z-index: 20;
-/*    opacity: 0;*/
-    /*display: none;*/
-    /*visibility: hidden;*/
-      border: 2px solid transparent; 
-      border-top: 2px solid #0E0F0F; 
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1.5s linear infinite;
-
-}
-.star{
-    z-index: 1;
-    margin: 0;
-    width: 40px;
-    height: 40px;
-    /*background-color: white;*/
-
-    background-image: url("../star.png");
-    background-size: 100%;
-
-    animation-name: rotating;
-    animation-duration: 4s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-
-}
-
-.star:hover{
-    cursor: pointer;
-}
-
-.star-container{
-    margin: 0;
-    position: absolute;
-    width: 190px;
-    height: 190px;
-/*    left: -30px;
-    top: 95px;*/
-    /*background-color: grey;*/
-}
-.star-container-animated{
-    animation-name: gravity;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-
-
-
-#c-l-2{
-    width: 230px;
-    height: 280px;
-
-    left: 100px;
-    top: 240px;
-}
-
-#c-l-3{
-    left: 145px;
-    bottom: 150px;
-}
-#l-3{
-    top: 0px;
-}
-
-#c-r-3{
-    width: 290px;
-    height: 290px;
-
-    right: 100px;
-    bottom: 150px;
-}
-#r-3{
-    top: 0;
-    left: 0;
-}
-#c-r-1{
-    
-    /*width: 80px;*/
-    width: 200px;
-    height: 400px;
-
-    top: 40px;
-    right: 80px;
-}
-#r-1{
-    left: 120px;
-    bottom: 320px;
-
-}
-
-#c-r-2{
-    height: 480px;
-    right: 140px;
-    top: 165px;
-}
-
-#r-2{
-    bottom: 280px;
-    left: 0px;
-}
-.star{
-    position: absolute;
-    right: 0px;
-    bottom: 0px ;
-}
-
-.star-l-1{
-    position: absolute;
-    left: 150px;
-    top: 150px ;
-/*    left: 120px;
-    top: 245px ;*/
-}
-
-.star-l-2{
-    position: absolute;
-    left: 290px;
-    top: 480px ;
-}
-
-.star-l-3{
-    position: absolute;
-    left: 295px;
-    bottom: 300px ;
-}
-
-.star-r-1{
-    position: absolute;
-    right: 120px;
-    top: 80px ;
-}
-
-.star-r-2{
-    position: absolute;
-    right: 290px;
-    top: 315px ;
-}
-
-.star-r-3{
-    position: absolute;
-    right: 350px;
-    bottom: 400px ;
-}
-
 
 .main-inner{
     position: relative;
@@ -363,23 +29,26 @@
 .main-inner > *{
     margin: 20px;
 }
+/* ----- floating elements begin -----*/
 .floating{
     z-index: 20;
     position: fixed;
     width: auto;
-    /*width: 50%;*/
     left: 0px;
-    /*top: 0px;*/
     top: 30px;
-    /*background-color: blue;*/
     margin: 0;
 }
 
+.floating-inner{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 25;
+    left: 20%;
+}
+
 #floating-logo{
-    /*visibility: hidden;*/
-    /*opacity: 1;*/
     display: inline-block;
-    /*left: 150px;*/
     top: 25px;
     z-index: 20;
     height: 73px;
@@ -387,7 +56,7 @@
     /*opacity: 0;*/
     filter: drop-shadow(rgb(230, 254, 84) 0px 0px 4px);
 
-    background-image: url("../floating-logo.png");
+    background-image: url("../images/floating-logo.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -396,24 +65,14 @@
     transition: all 0.2s ease-in;
 }
 
-.floating-inner{
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    z-index: 25;
-    /*right: 0;*/
-    left: 20%;
-}
-
 #floating-logo:hover{
-    /*background-color: blue;*/
     transform: rotate(180deg);
     cursor: pointer;
     transition: transform .3s linear;
 
 }
 
-.floating-text{
+#floating-text{
     visibility: hidden;
     display: inline-block;
     margin-left: 20px;
@@ -422,10 +81,12 @@
     opacity: 0;
     transition: all 0.5s ease-in;
 }
+/* ----- floating elements end -----*/
 
+
+
+/* ----- top link begin -----*/
 .link-container{
-/*    text-shadow: 0px 0px 10px rgb(230 254 84);
-    color: rgba(230, 254, 84, 1);*/
     margin-top: 55px;
     margin-bottom: 120px;
 
@@ -440,8 +101,9 @@
 .opensea-l:hover{
     color: white;
 }
+/* ----- top link end -----*/
 
-
+/* ----- logo and text begin -----*/
 .banner{
     align-content: space-between;
     /*height: 60vh;*/
@@ -467,40 +129,35 @@
 }
 
 
-
 .logo{
     height: 50%;
     width: 350px;
     /*width: 95%;*/
     /*background-color: yellowgreen;*/
-    background-image: url("../logo.png");
+    background-image: url("../images/logo.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
+/* ----- logo and text end -----*/
 
+/* ----- content 2 row structure begin -----*/
 .content{
-    /*height: 60vh;*/
     width: 90%;
-    /*background-color: limegreen;*/
-
     display: flex;
     justify-content: center;
-    /*flex-direction: column;*/
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 400px;
 }
 
-
-
 .content > *{
-    /*background-color: yellowgreen;*/
     width: 100%;
     margin-bottom: 10px;
 }
 
-.gif{
+/* ----- first row: gif begin -----*/
+.video{
     /*height: 500px;*/
     margin-bottom: 25px;
     border: rgba(35, 37, 38, 1) 1px solid;
@@ -510,7 +167,7 @@
     align-content: center;
 }
 
-.gif-holder{
+.video-holder{
     background-color: #0E0F0F;
     /*background-color: black;*/
     /*margin: 100px 0px;*/
@@ -527,13 +184,15 @@
     muted: true;
     width: 100%;
 }
+/* ----- first row: gif end -----*/
+
+/* ----- second row: wailist button, form and opensea ad begin -----*/
 .second-row{
     display: inline-flex;
     justify-content: space-between;
 }
 
 .second-row > *{
-    /*background-color: lightyellow;*/
     width: 49%;
     border: rgba(35, 37, 38, 1) 1px solid;
     border-radius: 25px;
@@ -542,9 +201,9 @@
 
 .wait, .opensea{
     display: inline-block;
-
 }
 
+/* ----- wailist button begin -----*/
 .wait{
     display: inline-block;
     height: 192px;
@@ -562,69 +221,53 @@
     transition: all 0.5s ease-out;
 }
 
+
+.waitlist-button-border-colored{
+    border: rgba(230 254 84) 1px solid;
+}
+
 .wait-hover:hover {
     cursor: pointer;
     border-color: rgba(230 254 84);
     border: rgba(230 254 84) 1px solid;
 }
+/* ----- wailist button end -----*/
 
+/* ----- wailist form begin -----*/
 .waitlist-form{
-    /*display: none;*/
     visibility: hidden;
-    /*margin-left: 25px;*/
     z-index: 2; 
     position:absolute; 
     right: 0px;
     border: none;
-
     width: 76%;
-
     display: inline-flex;
     justify-content: space-between;
     opacity: 0;
-
     transition: visibility 0.5s, opacity 0.5s ease-out;
 }
 
 .waitlist-form-email{
-
-
     border-radius: 25px;
     margin-right: 25px;
     display: inline-block;
     width: 65%;
     border: rgba(230 254 84) 1px solid;
-    /*background-color: yellow;*/
-
 }
-
-
-
-/*
-.waitlist-form-email > input:invalid {
-    border-color:red;
-}*/
 
 .waitlist-form-email input{
     box-sizing:border-box;
-
     height: 192px;
     text-decoration: none;
     width: 95%;
-
     border: none;
-/*    border: rgba(230 254 84) 1px solid;
-    border-radius: 25px;*/
     background: transparent;
     resize: none;
     outline: none;
-
     color: white;
     font-size: inherit;
     font-weight: 200;
     font-family: "SuisseIntl";
-
-
     padding: 0 20px;
 }
 
@@ -632,12 +275,6 @@
     border: red 1px solid !important;
 }
 
-/*.waitlist-form-email:invalid{
-    border: red 1px solid;
-}*/
-.waitlist-form-submit > *{
-    position: relative;
-}
 .waitlist-form-submit{
     position: relative;
     display: inline-block;
@@ -647,6 +284,23 @@
     height: 190px;
     /*background-color: white;*/
 
+}
+
+.waitlist-form-submit > *{
+    position: relative;
+}
+
+
+
+#loader{
+    position: absolute;
+    z-index: 20;
+    border: 2px solid transparent; 
+    border-top: 2px solid #0E0F0F; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.5s linear infinite;
 }
 
 
@@ -707,6 +361,9 @@
     color: rgb(230, 231, 230);
     border-color: rgb(38, 40, 41);
 }
+/* ----- wailist form end -----*/
+
+/* ----- opensea ad begin -----*/
 .opensea{
     /*width: 750px;*/
     width: 78%;
@@ -727,7 +384,7 @@
 }
 .opensea-pic{
     /*background-color: yellowgreen;*/
-    background-image: url("../transistor-old.png");
+    background-image: url("../images/transistor-old.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -769,8 +426,10 @@
     color: rgba(230, 254, 84, 1);
     text-shadow: 0px 0px 10px rgb(230 254 84);
 }
+/* ----- opensea ad end -----*/
+/* ----- content 2 row structure end -----*/
 
-
+/* ----- footer 3 column structure begin -----*/
 .footer{
     width: 90%;
     height: 100px;
@@ -785,14 +444,12 @@
 .footer > *{
     width: 30%;
     height: 100%;
-    /*background-color: yellowgreen;*/
     display: inline-flex;
     align-items: center;
 
 }
 
 .footer-left{
-
     justify-content: flex-start;
     position: absolute;
     left: 0px;
@@ -830,12 +487,11 @@
 }
 
 .footer-middle > *{
-    /*background-color: black;*/
     height: 69px;
     width: 69px;
     opacity: 0.6;
     /*background-color: yellowgreen;*/
-    background-image: url("../small-logo.png");
+    background-image: url("../images/small-logo.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -862,14 +518,7 @@
     margin: 20px;
     color: rgba(156, 156, 152, 1);
 }
-
-.check{
-    width: 76%;
-    position: absolute;
-    right: 0px;
-    display: none;
-    visibility: hidden;
-}
+/* ----- footer 3 column structure end -----*/
 
 
 
@@ -1051,109 +700,7 @@
         order: 3;
         margin-bottom: 0;
     }
-    .star{
-        height: 50px;
-        width: 50px;
-    }
-
-
-    #c-l-1{
-        visibility: hidden;
-        display: none;
-    }
-
-    #c-l-2{
-        visibility: hidden;
-        display: none;
-    }
-
-    #c-r-1{
-        left: 0px;
-        top: 0px;
-    }
-    #r-1{
-        left: 50px;
-        top: 100px;
-    }
-
-    #c-r-2{
-        right: 0px;
-        top: 0px;
-    }
-    #r-2{
-        left: 90px;
-        top: 190px;
-    }
-
-    #c-l-3{
-        width: 190px;
-        height: 190px;
-
-        position: absolute;
-        left: 295px;
-        bottom: 350px;
-    }
-
-    #c-r-3{
-        bottom: 0px;
-        left: 0px;
-    }
-    #r-3{
-        top: auto;
-        bottom: 50px;
-        left: 10px;
-        right: auto;
-    }
-
-
-    #c-l-3{
-        bottom: 0px;
-        right: 0px;
-        left:auto;
-        top: auto;
-    }
-    #l-3{
-        top: auto;
-        bottom: 350px;
-        right: 10px;
-        left: auto;
-    }
-
-/*    
-
-    .star-l-1-1{
-        visibility: hidden;
-        display: none;
-    }
-    .star-l-2{
-        visibility: hidden;
-        display: none;
-    }*/
-
-
-
-    .star-r-1 {
-        left: 50px;
-        top: 100px;
-    }
-
-    .star-r-2 {
-        position: absolute;
-        right: 50px;
-        top: 190px;
-    }
-
-    .star-l-3 {
-        position: absolute;
-        left: 295px;
-        bottom: 350px;
-    }
-
-    .star-r-3 {
-        position: absolute;
-        right: 325px;
-        bottom: 50px;
-    }
+    
     .floating{
         display: none;
     }
