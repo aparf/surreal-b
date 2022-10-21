@@ -172,8 +172,8 @@
     /*background-color: black;*/
     /*margin: 100px 0px;*/
     margin: 95px 0px;
-    width: 705px;
-    height: 1080px;
+    width: 629px;
+    height: 955px;
 /*    width: 628px;
     height: 942px;*/
 }
@@ -448,7 +448,7 @@
     align-items: center;
 
 }
-
+/* ----- footer 1 column begin -----*/
 .footer-left{
     justify-content: flex-start;
     position: absolute;
@@ -459,6 +459,7 @@
     color: rgba(156, 156, 152, 1);
     margin: 20px;
 }
+
 .footer-left-email{
     position: relative;
     display: inline-flex;
@@ -482,6 +483,18 @@
     transition: all 0.3s ease-in;
 }
 
+.footer-left-inner-text{
+    font-family: "SuisseIntl";
+    color: rgba(156, 156, 152, 1);
+    text-decoration: none; 
+}
+
+.footer-left-inner-text:hover {
+    color: rgba(230, 254, 84, 1);
+}
+/* ----- footer 1 column end -----*/
+
+/* ----- footer 2 column begin -----*/
 .footer-middle{
     justify-content: center;
 }
@@ -498,15 +511,6 @@
 
 }
 
-.footer-l{
-    font-family: "SuisseIntl";
-    color: rgba(156, 156, 152, 1);
-    text-decoration: none; 
-}
-
-.footer-l:hover {
-    color: rgba(230, 254, 84, 1);
-}
 
 .footer-right{
     position: absolute;
@@ -569,14 +573,14 @@
         border: none;
         margin-bottom: 75px;
     }
-    .gif-holder{
+    .video-holder{
         margin: 0;
         height: auto;
         overflow: hidden;
         object-position: center%;
     }
 
-    .gif-holder video{
+    .video-holder video{
         object-fit: cover;
         width: 130%;
         transform: translate(-14%);
@@ -595,7 +599,7 @@
         margin-bottom: 50px;
     }
 
-    .gif{
+    .video{
         border: none;
     }
 
