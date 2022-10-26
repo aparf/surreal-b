@@ -10,7 +10,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: #0E0F0F;
+    background-color: #0E0D0F;
     font-size: 28px;
     font-family: "SuisseIntl";
     font-weight: 200;
@@ -168,7 +168,7 @@
 }
 
 .video-holder{
-    background-color: #0E0F0F;
+    background-color: #0E0D0F;
     /*background-color: black;*/
     /*margin: 100px 0px;*/
     margin: 95px 0px;
@@ -296,7 +296,7 @@
     position: absolute;
     z-index: 20;
     border: 2px solid transparent; 
-    border-top: 2px solid #0E0F0F; 
+    border-top: 2px solid #0E0D0F; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
